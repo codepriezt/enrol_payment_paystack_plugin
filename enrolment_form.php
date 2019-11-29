@@ -72,7 +72,7 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 </style>
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script type ="text/javascript">
-const btn = document.querySelector('#sub_button').addEventListener('click' , payWithPayStack);
+const btn = document.querySelector('#sub_button').addEventListener('click' , payWithPaystack);
 
 
 
