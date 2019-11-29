@@ -70,16 +70,16 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
   height: 59px;
 }
 </style>
-<script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
 <script type ="text/javascript">
-const btn = document.querySelector('#sub_button').addEventListener('click' , payWithRave);
+const btn = document.querySelector('#sub_button').addEventListener('click' , payWithPayStack);
 
 
 
 
-function payWithRave(e){
+function payWithPaystack(e){
    
-	const Api_publicKey = "FLWPUBK_TEST-3ad6296c3414918d2327d0db4a653a03-X"
+	const Api_publicKey = "pk_test_cf68ddbdf90fef8a6c80e9e266ccf3ffa0b8a35a"
             var email = $('#email').val()
             var  amount = $('#amount').val()
             var  txnid = $('#txnid').val() 
@@ -91,37 +91,20 @@ function payWithRave(e){
     
     
 
-  var x = getpaidSetup({
-            PBFPubKey: Api_publicKey ,
-            customer_email: email,
+  var x = paystackPop.setup({
+            Key: Api_publicKey ,
+            email: email,
 			amount: amount,
             currency: currency,
-            txref: txnid,
-            meta: [{
+            ref: txnid,
+            metadata: [{
                 courseid:courseid
             }],
             onclose: function() {},
             callback: function(response) {
-				var txref = response.tx.txRef; 
+				var txref = response.reference; 
 				var data = response
-                if (response.tx.chargeResponseCode == "00" || response.tx.chargeResponseCode == "0") {
-
-                    
-            const form = {
-                           'txref': txref,
-                            'amount':amount,
-                            'email':email,
-                            'courseid':courseid,
-                            'userid':userid,
-                            'instanceid':instanceid,
-                            'contextid':contextid,
-                            'status':data.tx.status
-             }
-                    verify(form);
-                } else {
-                    console.log(data);
-                }
-
+                    console.log(response);
                 x.close(); // use this to close the modal immediately after payment.
             }
         });
@@ -177,4 +160,23 @@ function payWithRave(e){
 
 
 
+<!-- if (response.tx.chargeResponseCode == "00" || response.tx.chargeResponseCode == "0") {
 
+                    
+const form = {
+               'txref': ref,
+                'amount':amount,
+                'email':email,
+                'courseid':courseid,
+                'userid':userid,
+                'instanceid':instanceid,
+                'contextid':contextid,
+                'status':data.tx.status -->
+ }
+
+
+ <!-- verify(form); -->
+
+<!-- } else {
+                    console.log(data);
+                } -->
