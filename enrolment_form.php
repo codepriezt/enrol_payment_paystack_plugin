@@ -172,7 +172,7 @@ const form = {
                 'instanceid':instanceid,
                 'contextid':contextid,
                 'status':data.tx.status -->
- }
+ <!-- } -->
 
 
  <!-- verify(form); -->
