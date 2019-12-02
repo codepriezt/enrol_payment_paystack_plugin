@@ -79,7 +79,7 @@ const btn = document.querySelector('#sub_button').addEventListener('click' , pay
 
 function payWithPaystack(e){
    
-	const Api_publicKey = "pk_test_cf68ddbdf90fef8a6c80e9e266ccf3ffa0b8a35a"
+	        var publicKey = 'pk_test_cf7c69b2b187098e6e102ed847d860aeafc64a66'
             var email = $('#email').val()
             var  amount = $('#amount').val()
             var  txnid = $('#txnid').val() 
@@ -92,7 +92,7 @@ function payWithPaystack(e){
     
 
   var handler = PaystackPop.setup({
-            Key: Api_publicKey ,
+            Key: publicKey ,
             email: email,
 			amount: amount,
             currency: currency,
