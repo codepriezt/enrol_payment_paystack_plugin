@@ -122,9 +122,9 @@ function payWithPaystack(e){
                      }
                      verify(form);
                 }
-                
-                }
+
             },
+            
                 onClose: function(){
                         alert('window closed');
                     }
