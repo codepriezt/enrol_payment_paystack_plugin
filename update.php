@@ -90,7 +90,7 @@ $enrolflutter->amount = $amount;
 $enrolflutter->email = $email;
 $enrolflutter->txref = $txref;
 
-if ($status == "successful") {
+if ($status == "success") {
     $enrolflutter->status = 'Approved';
     
     $PAGE->set_context($context);

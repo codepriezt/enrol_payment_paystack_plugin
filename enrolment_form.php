@@ -106,7 +106,7 @@ function payWithPaystack(e){
 				var data = response
                 var txin = data.reference
                     console.log(data);
-                 if(data.reference === ref){
+                 if(data.reference == ref){
                       const form = {
                          'txref':txin,
                          'status':data.status,
