@@ -104,7 +104,12 @@ function payWithPaystack(e){
             callback: function(response) {
 				var txref = response.reference; 
 				var data = response
-                    console.log(response);
+                    console.log(data);
+
+                    if(response.status == 'success'){
+
+                       
+                    }
                 x.close(); // use this to close the modal immediately after payment.
             }
         });
@@ -146,13 +151,8 @@ function payWithPaystack(e){
 
     function assign(id)
     {
-        window.location.href =`/enrol/flutter/update.php?id=${id}`;
-       
+        window.location.href =`/enrol/flutter/update.php?id=${id}`;   
     }
-
-
-
-    
 
    
 		
@@ -161,7 +161,7 @@ function payWithPaystack(e){
 
 
 <!-- if (response.tx.chargeResponseCode == "00" || response.tx.chargeResponseCode == "0") {
-
+x
                     
 const form = {
                'txref': ref,
@@ -180,3 +180,18 @@ const form = {
 <!-- } else {
                     console.log(data);
                 } -->
+
+
+
+                <!-- const form = {
+                                    'txref': ref,
+                                    'amount':amount,
+                                    'email':email,
+                                    'courseid':courseid,
+                                    'userid':userid,
+                                    'instanceid':instanceid,
+                                    'contextid':contextid,
+                                    'status':response.status 
+                          }
+
+                          verify(form) -->
