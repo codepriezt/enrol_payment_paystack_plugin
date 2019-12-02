@@ -106,7 +106,9 @@ function payWithPaystack(e){
 				var data = response
                 var txin = data.reference
                     console.log(data);
-                 if(data.reference == ref){
+
+                    if(data.status == 'success')
+                    {
                       const form = {
                          'txref':txin,
                          'status':data.status,
@@ -119,6 +121,8 @@ function payWithPaystack(e){
 
                      }
                      verify(form);
+                }
+                
                 }
             },
                 onClose: function(){
