@@ -92,7 +92,7 @@ function payWithPaystack(e){
     
 
   var handler = PaystackPop.setup({
-            Key: publicKey ,
+            key: publicKey ,
             email: email,
 			amount: amount,
             currency: currency,
