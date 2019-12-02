@@ -97,9 +97,10 @@ function payWithPaystack(e){
 			amount: amount,
             currency: currency,
             ref: txnid,
-            metadata: [{
-                id:courseid
-            }],
+            channels:['card','bank'],
+            metadata: {
+                course_id:courseid
+            },
             onclose: function() {},
             callback: function(response) {
 				var txref = response.reference; 
