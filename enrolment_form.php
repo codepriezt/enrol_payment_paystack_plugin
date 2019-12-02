@@ -98,7 +98,7 @@ function payWithPaystack(e){
             currency: currency,
             ref: txnid,
             metadata: [{
-                courseid:courseid
+                id:courseid
             }],
             onclose: function() {},
             callback: function(response) {
