@@ -103,9 +103,23 @@ function payWithPaystack(e){
             },
             
             callback: function(response) {
-				var txref = response.reference; 
 				var data = response
+                var txin = data.reference
                     console.log(data);
+                 if(data.reference === ref){
+                      const form = {
+                         'txref':txin,
+                         'status':data.status,
+                         'amount':amount,
+                        'email':email,
+                        'courseid':courseid,
+                        'userid':userid,
+                        'instanceid':instanceid,
+                        'contextid':contextid,
+
+                     }
+                     verify(form);
+                }
             },
                 onClose: function(){
                         alert('window closed');
@@ -160,39 +174,3 @@ function payWithPaystack(e){
 </script>
 
 
-
-<!-- if (response.tx.chargeResponseCode == "00" || response.tx.chargeResponseCode == "0") {
-x
-                    
-const form = {
-               'txref': ref,
-                'amount':amount,
-                'email':email,
-                'courseid':courseid,
-                'userid':userid,
-                'instanceid':instanceid,
-                'contextid':contextid,
-                'status':data.tx.status -->
- <!-- } -->
-
-
- <!-- verify(form); -->
-
-<!-- } else {
-                    console.log(data);
-                } -->
-
-
-
-                <!-- const form = {
-                                    'txref': ref,
-                                    'amount':amount,
-                                    'email':email,
-                                    'courseid':courseid,
-                                    'userid':userid,
-                                    'instanceid':instanceid,
-                                    'contextid':contextid,
-                                    'status':response.status 
-                          }
-
-                          verify(form) -->
