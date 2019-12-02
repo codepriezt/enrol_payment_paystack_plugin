@@ -106,11 +106,7 @@ function payWithPaystack(e){
 				var txref = response.reference; 
 				var data = response
                     console.log(data);
-
-                    if(response.status == 'success'){
-  
-                    }
-            };
+            },
                 onClose: function(){
                         alert('window closed');
                     }
@@ -119,7 +115,7 @@ function payWithPaystack(e){
         handler.openIframe();
 
     e.preventDefault();
-    }
+ }
 
 
     function verify(form)
