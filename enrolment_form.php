@@ -91,7 +91,7 @@ function payWithPaystack(e){
     
     
 
-  var x = PaystackPop.setup({
+  var handler = PaystackPop.setup({
             Key: Api_publicKey ,
             email: email,
 			amount: amount,
