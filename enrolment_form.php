@@ -101,19 +101,23 @@ function payWithPaystack(e){
             metadata: {
                 course_id:courseid
             },
-            onclose: function() {},
+            
             callback: function(response) {
 				var txref = response.reference; 
 				var data = response
                     console.log(data);
 
                     if(response.status == 'success'){
-
-                       
+  
                     }
-                x.close(); // use this to close the modal immediately after payment.
-            }
+            };
+                onClose: function(){
+                        alert('window closed');
+                    }
+            
         });
+        handler.openIframe();
+
     e.preventDefault();
     }
 
