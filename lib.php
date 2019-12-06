@@ -55,7 +55,7 @@ class enrol_paystack_plugin extends enrol_plugin {
      * @return array of pix_icon
      */
     public function get_info_icons(array $instances) {
-        return array(new pix_icon('icon', get_string('pluginname', 'enrol_paystack'), 'enrol_flutter'));
+        return array(new pix_icon('icon', get_string('pluginname', 'enrol_paystack'), 'enrol_paystack'));
     }
     /**
      * Lists all protected user roles.
@@ -121,7 +121,7 @@ class enrol_paystack_plugin extends enrol_plugin {
     public function get_action_icons(stdClass $instance) {
         global $OUTPUT;
 
-        if ($instance->enrol !== 'flutter') {
+        if ($instance->enrol !== 'paystack') {
             throw new coding_exception('invalid enrol instance!');
         }
         $context = context_course::instance($instance->courseid);

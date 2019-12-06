@@ -40,7 +40,7 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 <p><b><?php echo $instancename; ?></b></p>
 <p><b><?php echo get_string("cost").": {$instance->currency} {$localisedcost}"; ?></b></p>
 <p>&nbsp;</p>
-<p><img alt="PayUMoney" src="<?php echo $CFG->wwwroot; ?>/enrol/flutter/pix/paystack.png" /></p>
+<p><img alt="PayUMoney" src="<?php echo $CFG->wwwroot; ?>/enrol/paystack/pix/paystack.png" /></p>
 <p>&nbsp;</p>
 <p>
 	<form>
@@ -60,7 +60,7 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 </div>
 <style type="text/css">
 #sub_button{
-  background: url("<?php echo $CFG->wwwroot; ?>/enrol/flutter/pix/paystack2.png") no-repeat scroll 0 0 transparent;
+  background: url("<?php echo $CFG->wwwroot; ?>/enrol/paystack/pix/paystack2.png") no-repeat scroll 0 0 transparent;
   color: #000000;
   cursor: pointer;
   font-weight: bold;
