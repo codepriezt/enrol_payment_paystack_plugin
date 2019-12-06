@@ -17,7 +17,7 @@
 /**
  * Capabilities for Flutter.com enrolment plugin.
  *
- * @package    enrol_flutter
+ * @package    enrol_paystack
  * @author     codepriezt
  *
  */
@@ -26,14 +26,14 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    'enrol/flutter:config' => array(
+    'enrol/paystack:config' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_COURSE,
         'archetypes' => array(
             'manager' => CAP_ALLOW,
         )
     ),
-    'enrol/flutter:manage' => array(
+    'enrol/paystack:manage' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_COURSE,
         'archetypes' => array(
@@ -41,14 +41,14 @@ $capabilities = array(
             'editingteacher' => CAP_ALLOW,
         )
     ),
-    'enrol/flutter:unenrol' => array(
+    'enrol/paystack:unenrol' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_COURSE,
         'archetypes' => array(
             'manager' => CAP_ALLOW,
         )
     ),
-    'enrol/flutter:unenrolself' => array(
+    'enrol/paystack:unenrolself' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_COURSE,
         'archetypes' => array(

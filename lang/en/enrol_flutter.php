@@ -21,8 +21,8 @@
  * @author     codepriezt
  */
 
-$string['pluginname'] = 'Flutter';
-$string['pluginname_desc'] = 'The Flutter module allows you to set up paid courses.  If the cost for any course is zero, then students are not asked to pay for entry.  There is a site-wide cost that you set here as a default for the whole site and then a course setting that you can set for each course individually. The course cost overrides the site cost.';
+$string['pluginname'] = 'Paystack';
+$string['pluginname_desc'] = 'The Paystack module allows you to set up paid courses.  If the cost for any course is zero, then students are not asked to pay for entry.  There is a site-wide cost that you set here as a default for the whole site and then a course setting that you can set for each course individually. The course cost overrides the site cost.';
 $string['mailadmins'] = 'Notify admin';
 $string['expiredaction'] = 'Enrolment expiration action';
 $string['expiredaction_help'] = 'Select action to carry out when user enrolment expires. Please note that some user data and settings are purged from course during course unenrolment.';
@@ -32,7 +32,7 @@ $string['costorkey'] = 'Please choose one of the following methods of enrolment.
 $string['currency'] = 'Currency';
 $string['assignrole'] = 'Assign role';
 $string['defaultrole'] = 'Default role assignment';
-$string['defaultrole_desc'] = 'Select role which should be assigned to users during PayUMoney enrolments';
+$string['defaultrole_desc'] = 'Select role which should be assigned to users during Paystack enrolments';
 $string['enrolenddate'] = 'End date';
 $string['enrolenddate_help'] = 'If enabled, users can be enrolled until this date only.';
 $string['enrolenddaterror'] = 'Enrolment end date cannot be earlier than start date';
@@ -43,10 +43,10 @@ $string['enrolstartdate'] = 'Start date';
 $string['enrolstartdate_help'] = 'If enabled, users can be enrolled from this date onward only.';
 $string['expiredaction'] = 'Enrolment expiration action';
 $string['expiredaction_help'] = 'Select action to carry out when user enrolment expires. Please note that some user data and settings are purged from course during course unenrolment.';
-$string['flutter:config'] = 'Configure PayUMoney enrol instances';
-$string['flutter:manage'] = 'Manage enrolled users';
-$string['flutter:unenrol'] = 'Unenrol users from course';
-$string['flutter:unenrolself'] = 'Unenrol self from the course';
-$string['status'] = 'Allow Flutter enrolments';
-$string['status_desc'] = 'Allow users to use PayUMoney to enrol into a course by default.';
+$string['paystack:config'] = 'Configure Paystack enrol instances';
+$string['paystack:manage'] = 'Manage enrolled users';
+$string['paystack:unenrol'] = 'Unenrol users from course';
+$string['paystack:unenrolself'] = 'Unenrol self from the course';
+$string['status'] = 'Allow Stack enrolments';
+$string['status_desc'] = 'Allow users to use PayStack to enrol into a course by default.';
 $string['unenrolselfconfirm'] = 'Do you really want to unenrol yourself from course "{$a}"?';

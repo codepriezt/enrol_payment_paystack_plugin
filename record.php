@@ -20,14 +20,14 @@ $enrolflutter->timeupdated = time();
 
 
 
-$ret1 = $DB->insert_record("enrol_flutter", $enrolflutter, true);
+$ret1 = $DB->insert_record("enrol_paystack", $enrolflutter, true);
 
 echo $ret1;
 
 die;
 
 echo '<script type="text/javascript">
-     window.location.href="'.$CFG->wwwroot.'/enrol/flutter/update.php?id='.$ret1.'";
+     window.location.href="'.$CFG->wwwroot.'/enrol/paystack/update.php?id='.$ret1.'";
      </script>';
 
 die;

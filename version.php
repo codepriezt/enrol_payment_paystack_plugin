@@ -23,9 +23,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019102001;
+$plugin->version   = 2019112001;
 $plugin->requires  = 2014051200;
-$plugin->component = 'enrol_flutter';
+$plugin->component = 'enrol_paystack';
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->release   = '2.0 (Build: 20170910)';
 $plugin->cron      = 60;

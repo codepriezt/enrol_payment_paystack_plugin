@@ -20,7 +20,7 @@
  * This script waits for Payment notification from PayUMoney.com, 
  * then it sets up the enrolment for that user.
  *
- * @package    enrol_flutter
+ * @package    enrol_paystack
  * @author     codepriezt
  
  */
@@ -39,7 +39,7 @@ global $DB, $CFG;
 $id = required_param('id', PARAM_INT);
 
 
-$response = $DB->get_record('enrol_flutter', array('id' => $id));
+$response = $DB->get_record('enrol_paystack', array('id' => $id));
 
 
 
@@ -152,7 +152,7 @@ if ($status == "successful") {
 }
 
 echo '<script type="text/javascript">
-     window.location.href="'.$CFG->wwwroot.'/enrol/flutter/return.php?id='.$courseid.'";
+     window.location.href="'.$CFG->wwwroot.'/enrol/paystack/return.php?id='.$courseid.'";
      </script>';
 die;
 

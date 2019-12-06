@@ -17,7 +17,7 @@
 /**
  * Adds new instance of enrol_payumoney to specified course or edits current instance.
  * 
- * @package    enrol_payumoney
+ * @package    enrol_paystack
  * @copyright  2017 Exam Tutor, Venkatesan R Iyengar
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -42,7 +42,7 @@ class enrol_flutter_edit_form extends moodleform {
 
         list($instance , $plugin  , $context) = $this->_customdata;
 
-        $mform->addElement('header' , 'header' , get_string('pluginname' , 'enrol_flutter'));
+        $mform->addElement('header' , 'header' , get_string('pluginname' , 'enrol_paystack'));
 
         $mform->addElement('text', 'name',get_string('custominstancename' , 'enrol'));
 
@@ -50,17 +50,17 @@ class enrol_flutter_edit_form extends moodleform {
 
         $options = array(ENROL_INSTANCE_ENABLED => get_string('yes') , ENROL_INSTANCE_DISABLED => get_string('no'));
 
-        $mform->addElement('select' , 'status' ,get_string('status' ,'enrol_flutter') , $options);
+        $mform->addElement('select' , 'status' ,get_string('status' ,'enrol_paystack') , $options);
 
         $mform->setDefault('status',$plugin->get_config('status'));
 
-        $mform->addElement('text' , 'cost' , get_string('cost' , 'enrol_flutter'), array('size' => 4));
+        $mform->addElement('text' , 'cost' , get_string('cost' , 'enrol_paystack'), array('size' => 4));
 
         $mform->setDefault('cost' , format_float($plugin->get_config('cost') , 2 , true));
 
         $currencies = $plugin->get_currencies();
 
-        $mform->addElement('select' , 'currency' , get_string('currency' , 'enrol_flutter') , $currencies);
+        $mform->addElement('select' , 'currency' , get_string('currency' , 'enrol_paystack') , $currencies);
 
         $mform->setDefault('currency' , $plugin->get_config('currency'));
 
@@ -71,24 +71,24 @@ class enrol_flutter_edit_form extends moodleform {
             $roles = get_default_enrol_roles($context , $plugin->get_config('roleid'));
         }
 
-        $mform->addElement('select', 'roleid', get_string('assignrole', 'enrol_flutter'), $roles);
+        $mform->addElement('select', 'roleid', get_string('assignrole', 'enrol_paystack'), $roles);
 
         $mform->setDefault('roleid', $plugin->get_config('roleid'));
 
-        $mform->addElement('duration', 'enrolperiod', get_string('enrolperiod', 'enrol_flutter'),
+        $mform->addElement('duration', 'enrolperiod', get_string('enrolperiod', 'enrol_paystack'),
                            array('optional' => true, 'defaultunit' => 86400));
         $mform->setDefault('enrolperiod', $plugin->get_config('enrolperiod'));
-        $mform->addHelpButton('enrolperiod', 'enrolperiod', 'enrol_flutter');
+        $mform->addHelpButton('enrolperiod', 'enrolperiod', 'enrol_paystack');
 
-        $mform->addElement('date_time_selector', 'enrolstartdate', get_string('enrolstartdate', 'enrol_flutter'),
+        $mform->addElement('date_time_selector', 'enrolstartdate', get_string('enrolstartdate', 'enrol_paystack'),
                            array('optional' => true));
         $mform->setDefault('enrolstartdate', 0);
-        $mform->addHelpButton('enrolstartdate', 'enrolstartdate', 'enrol_flutter');
+        $mform->addHelpButton('enrolstartdate', 'enrolstartdate', 'enrol_paystack');
 
-        $mform->addElement('date_time_selector', 'enrolenddate', get_string('enrolenddate', 'enrol_flutter'),
+        $mform->addElement('date_time_selector', 'enrolenddate', get_string('enrolenddate', 'enrol_paystack'),
                            array('optional' => true));
         $mform->setDefault('enrolenddate', 0);
-        $mform->addHelpButton('enrolenddate', 'enrolenddate', 'enrol_flutter');
+        $mform->addHelpButton('enrolenddate', 'enrolenddate', 'enrol_paystack');
 
         $mform->addElement('hidden', 'id');
         $mform->setType('id', PARAM_INT);
@@ -120,12 +120,12 @@ class enrol_flutter_edit_form extends moodleform {
         list($instance, $plugin, $context) = $this->_customdata;
 
         if (!empty($data['enrolenddate']) and $data['enrolenddate'] < $data['enrolstartdate']) {
-            $errors['enrolenddate'] = get_string('enrolenddaterror', 'enrol_flutter');
+            $errors['enrolenddate'] = get_string('enrolenddaterror', 'enrol_paystack');
         }
 
         $cost = str_replace(get_string('decsep', 'langconfig'), '.', $data['cost']);
         if (!is_numeric($cost)) {
-            $errors['cost'] = get_string('costerror', 'enrol_flutter');
+            $errors['cost'] = get_string('costerror', 'enrol_paystack');
         }
 
         return $errors;

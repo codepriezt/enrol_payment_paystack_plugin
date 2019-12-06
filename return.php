@@ -17,12 +17,12 @@
 /**
  * PayUMoney.com utility script
  *
- * @package    enrol_flutterdotcom
+ * @package    enrol_paystackdotcom
  * @author     codepriezt
  */
 
 require("../../config.php");
-require_once("$CFG->dirroot/enrol/flutter/lib.php");
+require_once("$CFG->dirroot/enrol/paystack/lib.php");
 
 $id = required_param('id', PARAM_INT);
 
