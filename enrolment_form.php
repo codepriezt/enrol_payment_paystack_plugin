@@ -40,7 +40,7 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 <p><b><?php echo $instancename; ?></b></p>
 <p><b><?php echo get_string("cost").": {$instance->currency} {$localisedcost}"; ?></b></p>
 <p>&nbsp;</p>
-<p><img alt="PayUMoney" src="<?php echo $CFG->wwwroot; ?>/enrol/paystack/pix/paystack.png" /></p>
+<p><img alt="Paystack" src="<?php echo $CFG->wwwroot; ?>/enrol/paystack/pix/paystack.png" /></p>
 <p>&nbsp;</p>
 <p>
 	<form>
@@ -60,10 +60,11 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 </div>
 <style type="text/css">
 #sub_button{
-  background: url("<?php echo $CFG->wwwroot; ?>/enrol/paystack/pix/paystack2.png") no-repeat scroll 0 0 transparent;
-  color: #000000;
+  background-color:#212121;
+  color: #212121;
   cursor: pointer;
   font-weight: bold;
+  font color:#fff;
   height: 20px;
   padding-bottom:2px;
   width: 301px;
@@ -79,7 +80,7 @@ const btn = document.querySelector('#sub_button').addEventListener('click' , pay
 
 function payWithPaystack(e){
    
-	        var publicKey = 'pk_test_cf7c69b2b187098e6e102ed847d860aeafc64a66'
+	        var publicKey = 'pk_live_007c6148d99a5fa1a462acc12e301e60b69f2d1b'
             var email = $('#email').val()
             var  amount = $('#amount').val()
             var  txnid = $('#txnid').val() 
@@ -87,7 +88,7 @@ function payWithPaystack(e){
             var userid =$('#userid').val()
             var instanceid = $('#instanceid').val()
             var contextid = $('#contextid').val()
-            const currency = 'NG'?'NGN':'USD'
+            const currency = "NGN"
     
     
 
