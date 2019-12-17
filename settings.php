@@ -62,7 +62,7 @@ if ($ADMIN->fulltree) {
     get_string('status_desc', 'enrol_paystack'), ENROL_INSTANCE_DISABLED, $options));
 
     $settings->add(new admin_setting_configtext('enrol_paystack/cost',
-    get_string('cost', 'enrol_flutter'), '', 0, PARAM_FLOAT, 4));
+    get_string('cost', 'enrol_paystack'), '', 0, PARAM_FLOAT, 4));
 
     $currencies = enrol_get_plugin('paystack')->get_currencies();
     $settings->add(new admin_setting_configselect('enrol_paystack/currency',
