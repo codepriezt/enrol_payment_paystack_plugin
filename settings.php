@@ -17,7 +17,7 @@
 /**
  * PayUMoney.com enrolments plugin settings and presets.
  *
- * @package    enrol_flutter
+ * @package    enrol_paystack
  * @author     codepriezt
  *
  */

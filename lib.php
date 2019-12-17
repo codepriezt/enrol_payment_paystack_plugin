@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * PayUMoney.com enrolment plugin.
+ * PayStack.com enrolment plugin.
  *
- * @package    enrol_payumoney
+ * @package    enrol_paystack
  * @copyright  2017 Exam Tutor, Venkatesan R Iyengar
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

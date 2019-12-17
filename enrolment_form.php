@@ -64,7 +64,6 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
   color: #fff;
   cursor: pointer;
   font-weight: bold;
-  font color:#fff;
   height: 20px;
   padding-bottom:2px;
   width: 301px;
@@ -74,13 +73,13 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script type ="text/javascript">
 const btn = document.querySelector('#sub_button').addEventListener('click' , payWithPaystack);
-
+ const pk = 'pk_live_007c6148d99a5fa1a462acc12e301e60b69f2d1b'
 
 
 
 function payWithPaystack(e){
    
-	        var publicKey = 'pk_live_007c6148d99a5fa1a462acc12e301e60b69f2d1b'
+	        var publicKey = 'pk_test_cf7c69b2b187098e6e102ed847d860aeafc64a66'
             var email = $('#email').val()
             var  amount = $('#amount').val() * 100
             var  txnid = $('#txnid').val() 
@@ -91,7 +90,7 @@ function payWithPaystack(e){
             const currency = "NGN"
            
     
-    
+            
 
   var handler = PaystackPop.setup({
             key: publicKey ,
