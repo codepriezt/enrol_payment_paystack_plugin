@@ -55,7 +55,7 @@ class enrol_paystack_plugin extends enrol_plugin {
      * @return array of pix_icon
      */
     public function get_info_icons(array $instances) {
-        return array(new pix_icon('icon', get_string('pluginname', 'enrol_paystack'), 'enrol_paystack'));
+        return array(new pix_icon('icon', get_string('pluginname', 'enrol_paystack')));
     }
     /**
      * Lists all protected user roles.
