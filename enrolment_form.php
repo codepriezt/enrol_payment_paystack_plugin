@@ -61,7 +61,7 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 <style type="text/css">
 #sub_button{
   background-color:#f16318;
-  color: #f16318;
+  color: #fff;
   cursor: pointer;
   font-weight: bold;
   font color:#fff;
