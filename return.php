@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * PayUMoney.com utility script
+ * Paystack.com utility script
  *
  * @package    enrol_paystackdotcom
  * @author     codepriezt
@@ -47,7 +47,7 @@ if (!empty($SESSION->wantsurl)) {
 $fullname = format_string($course->fullname, true, array('context' => $context));
 $fullname = format_string($course->fullname , true);
 
-if (is_enrolled($context, null, '', true)) {
+if (!is_enrolled($context, null, '', true)) {
     redirect($destination);
 } else {
     $PAGE->set_url($destination);

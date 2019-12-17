@@ -30,7 +30,7 @@ require_once($CFG->libdir.'/formslib.php');
  * @author     codepriezt    
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class enrol_flutter_edit_form extends moodleform {
+class enrol_paystack_edit_form extends moodleform {
     /**
      * Sets up moodle form.
      * @return void
