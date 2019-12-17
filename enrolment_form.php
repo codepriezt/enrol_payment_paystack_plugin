@@ -60,8 +60,8 @@ $udf1 = $instance->courseid.'-'.$USER->id.'-'.$instance->id.'-'.$context->id.'-'
 </div>
 <style type="text/css">
 #sub_button{
-  background-color:#212121;
-  color: #212121;
+  background-color:#f16318;
+  color: #f16318;
   cursor: pointer;
   font-weight: bold;
   font color:#fff;
@@ -82,13 +82,14 @@ function payWithPaystack(e){
    
 	        var publicKey = 'pk_live_007c6148d99a5fa1a462acc12e301e60b69f2d1b'
             var email = $('#email').val()
-            var  amount = $('#amount').val()
+            var  amount = $('#amount').val() * 100
             var  txnid = $('#txnid').val() 
             var courseid = $('#courseid').val()
             var userid =$('#userid').val()
             var instanceid = $('#instanceid').val()
             var contextid = $('#contextid').val()
             const currency = "NGN"
+           
     
     
 
